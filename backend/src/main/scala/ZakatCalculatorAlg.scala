@@ -1,5 +1,3 @@
-package backend
-
 import cats.Applicative
 import cats.implicits.*
 

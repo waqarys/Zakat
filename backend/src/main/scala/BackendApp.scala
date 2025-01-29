@@ -1,9 +1,7 @@
-package backend
-
-import cats.effect._
-import org.http4s.server.blaze._
-import org.http4s.implicits._
+import cats.effect.*
 import cats.effect.unsafe.implicits.global
+import org.http4s.implicits.*
+import org.http4s.server.blaze.*
 
 object BackendApp extends IOApp {
 

@@ -1,4 +1,3 @@
-package frontend
 
 trait ZakatApiAlg[F[_]] {
   def calculateZakat(

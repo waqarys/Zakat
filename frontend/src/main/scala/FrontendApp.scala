@@ -1,6 +1,4 @@
-package frontend
-
-import com.raquo.laminar.api.L._
+import com.raquo.laminar.api.L.*
 
 object FrontendApp {
   def main(args: Array[String]): Unit = {

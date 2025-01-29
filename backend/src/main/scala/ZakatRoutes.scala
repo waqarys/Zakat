@@ -1,14 +1,11 @@
-package backend
-
-import cats.effect.*
 import cats.Monad
+import cats.effect.*
 import cats.implicits.*
-import org.http4s.{EntityDecoder, EntityEncoder, HttpRoutes}
-import org.http4s.dsl.Http4sDsl
-import org.http4s.circe.*
+import io.circe.{Decoder, Encoder}
 import io.circe.generic.auto.*
-import io.circe.Encoder
-import io.circe.Decoder
+import org.http4s.circe.*
+import org.http4s.dsl.Http4sDsl
+import org.http4s.{EntityDecoder, EntityEncoder, HttpRoutes}
 
 class ZakatRoutes[F[_] : Concurrent : Monad](zakatService: ZakatCalculatorAlg[F]) extends Http4sDsl[F] {
 
