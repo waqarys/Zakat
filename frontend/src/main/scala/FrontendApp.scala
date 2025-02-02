@@ -22,7 +22,7 @@ object FrontendApp {
           val debts = debtsInput.value.toDoubleOption.getOrElse(0.0)
 
           val zakat = (cash + gold + silver + businessAssets - debts) * 0.025
-          dom.document.getElementById("result").textContent = f"Zakat Payable: $$zakat%.2f"
+          dom.document.getElementById("result").textContent = f"Zakat Payable: $$${zakat}%.2f"
         },
         div(label("Cash"), input(idAttr := "cash", tpe := "number")),
         div(label("Gold"), input(idAttr := "gold", tpe := "number")),
