@@ -6,6 +6,7 @@ scalaJSUseMainModuleInitializer := true // Required for generating JS files
 
 Compile / fastOptJS / artifactPath := (Compile / crossTarget).value / "frontend-fastopt.js"
 
+libraryDependencies += "com.raquo" %%% "laminar" % "0.14.5"
 
 lazy val frontend = (project in file("."))
   .enablePlugins(ScalaJSPlugin)
