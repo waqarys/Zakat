@@ -67,8 +67,11 @@ lazy val backend = (project in file("backend"))
       "org.http4s" %% "http4s-ember-server" % "0.23.9",
       "org.http4s" %% "http4s-circe" % "0.23.9",
       "io.circe" %% "circe-generic" % "0.14.5"
-    )
+    ),
+    // Add managed resources to the classpath:
+    Compile / unmanagedResourceDirectories += (Compile / resourceManaged).value
   ): _*)
+
 
 // Task to copy the Scala.js fastOptJS output into the backend's resources.
 lazy val copyFrontendJS = taskKey[Seq[File]]("Copy frontend fastOptJS output to backend resources")
